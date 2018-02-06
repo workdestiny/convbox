@@ -8,7 +8,7 @@ Convbox use convert number (integer) to short number (string)
 ```go
 func main() {
   
-  // s string = "1.2K"
+  // s string = "12.3K"
   s := convbox.ShortNumber(12300)
 
   // s string = "1.2M"
