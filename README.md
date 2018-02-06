@@ -1,6 +1,6 @@
 # Convbox
 
-[![Go Report Card](http://github.com/workdestiny/convbox)](http://github.com/workdestiny/convbox)
+[![Go Report Card](https://goreportcard.com/badge/github.com/workdestiny/convbox)](https://goreportcard.com/report/github.com/workdestiny/convbox)
 
 Convbox use convert number (integer) to short number (string)
 
