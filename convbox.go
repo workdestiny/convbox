@@ -1,6 +1,13 @@
 package convbox
 
-import "strconv"
+import (
+	"strconv"
+	"time"
+)
+
+const (
+	timeFormat = "2006-01-02"
+)
 
 //ShortNumber use convert number (integer) to short number (string)
 func ShortNumber(count int) string {
@@ -26,4 +33,28 @@ func ShortNumber(count int) string {
 
 	return number
 
+}
+
+// GetYMD return 3 Value (Year, Month, Day)
+func GetDate(t time.Time) (string, string, string) {
+	date := t.Format(timeFormat)
+	return date[0:4], date[5:7], date[8:10]
+}
+
+// GetYear return Year
+func GetYear(t time.Time) string {
+	date := t.Format(timeFormat)
+	return date[0:4]
+}
+
+// GetMonth return Month
+func GetMonth(t time.Time) string {
+	date := t.Format(timeFormat)
+	return date[5:7]
+}
+
+// GetDay return Day
+func GetDay(t time.Time) string {
+	date := t.Format(timeFormat)
+	return date[8:10]
 }
