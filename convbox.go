@@ -18,6 +18,31 @@ func ShortNumber(count int) string {
 		m := number[0 : len(number)-6]
 		m1 := number[len(number)-6 : len(number)-5]
 		if m1 == "0" {
+			return number[0:len(number)-6] + "ล้าน"
+		}
+		return m + "." + m1 + "ล้าน"
+	}
+
+	if len(number) > 3 {
+		m := number[0 : len(number)-3]
+		m1 := number[len(number)-3 : len(number)-2]
+		if m1 == "0" {
+			return m + "พัน"
+		}
+		return m + "." + m1 + "พัน"
+	}
+
+	return number
+
+}
+
+func ShortNumberWorld(count int) string {
+
+	number := strconv.Itoa(count)
+	if len(number) > 6 {
+		m := number[0 : len(number)-6]
+		m1 := number[len(number)-6 : len(number)-5]
+		if m1 == "0" {
 			return number[0:len(number)-6] + "M"
 		}
 		return m + "." + m1 + "M"
